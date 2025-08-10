@@ -5,8 +5,8 @@
     <string name="config_defaultListenerAccessPackages">com.google.android.projection.gearhead</string>
     <string name="config_defaultModuleMetadataProvider">com.google.android.modulemetadata</string>
     <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
-    <string name="config_mms_user_agent">Android-Mms/0.1</string>
-    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+    <string name="config_mms_user_agent">Android-Mms/0.1</string> <!-- huh?? the fuck is this? -->
+    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string> <!-- huh?? the fuck is this? -->
     <string name="config_qualified_networks_service_package">com.android.phone</string>
     <string name="config_systemSupervision">com.google.android.gms.supervision</string>
     <string name="config_wallpaperCropperPackage">com.android.wallpaperpicker</string>
