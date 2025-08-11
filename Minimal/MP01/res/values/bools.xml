@@ -5,7 +5,7 @@
     <bool name="config_device_volte_available">true</bool>
     <bool name="config_carrier_volte_available">true</bool>
     <bool name="imsServiceAllowTurnOff">true</bool> <!-- TODO: will this fix something? idfk -->
-    <bool name="config_device_vt_available">false</bool> <!-- TODO: check if this is correct -->
+    <bool name="config_device_vt_available">false</bool> <!-- TODO: check if this is correct, idk what VT does -->
     <bool name="config_device_wfc_ims_available">false</bool> <!-- TODO: check if this can be enabled and/if it's causing volte issues -->
     <bool name="config_enableMultiUserUI">true</bool>
     <bool name="config_hotswapCapable">true</bool>
