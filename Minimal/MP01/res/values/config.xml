@@ -58,18 +58,18 @@
     <bool name="config_useDevInputEventForAudioJack">true</bool>
     <bool name="skip_restoring_network_selection">false</bool>
 
-        <!-- Are we allowed to dream while not plugged in? -->
-    <bool name="config_dreamsEnabledOnBattery">false</bool>
+    <!-- Are we allowed to dream while not plugged in? -->
+    <bool name="config_dreamsEnabledOnBattery">true</bool>
     <!-- Minimum battery level to allow dreaming when powered.
          Use -1 to disable this safety feature. -->
     <integer name="config_dreamsBatteryLevelMinimumWhenPowered">-1</integer>
     <!-- Minimum battery level to allow dreaming when not powered.
          Use -1 to disable this safety feature. -->
-    <integer name="config_dreamsBatteryLevelMinimumWhenNotPowered">20</integer>
+    <integer name="config_dreamsBatteryLevelMinimumWhenNotPowered">30</integer>
     <!-- If the battery level drops by this percentage and the user activity timeout
          has expired, then assume the device is receiving insufficient current to charge
          effectively and terminate the dream.  Use -1 to disable this safety feature.  -->
-    <integer name="config_dreamsBatteryLevelDrainCutoff">5</integer>
+    <integer name="config_dreamsBatteryLevelDrainCutoff">20</integer>
     <!-- Flag to disable all transition animations -->
     <bool name="config_disableTransitionAnimation">true</bool>
     <!-- Whether safe headphone hearing is enforced by any regulation (e.g.
@@ -89,4 +89,27 @@
     <integer name="config_drawLockTimeoutMillis">700</integer>
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
+    <!-- Package name of the default launcher -->
+    <string name="config_defaultLauncher" translatable="false">app.inkos</string>
+
+    <!-- Force the default launcher without user prompt -->
+    <array name="config_persistentPreferredActivities">
+        <item>
+            <!-- Preferred HOME activity -->
+            <preferred-activity
+                android:priority="100"
+                android:match="action.MAIN:category.HOME:category.DEFAULT">
+                <set>
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category android:name="android.intent.category.HOME" />
+                        <category android:name="android.intent.category.DEFAULT" />
+                    </intent-filter>
+                </set>
+                <activity
+                    android:name="com.github.gezimos.inkos.MainActivity"
+                    android:package="app.inkos" />
+            </preferred-activity>
+        </item>
+    </array>
 </resources>
