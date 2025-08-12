@@ -89,27 +89,4 @@
     <integer name="config_drawLockTimeoutMillis">700</integer>
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
-    <!-- Package name of the default launcher -->
-    <string name="config_defaultLauncher" translatable="false">app.inkos</string>
-
-    <!-- Force the default launcher without user prompt -->
-    <array name="config_persistentPreferredActivities">
-        <item>
-            <!-- Preferred HOME activity -->
-            <preferred-activity
-                android:priority="100"
-                android:match="action.MAIN:category.HOME:category.DEFAULT">
-                <set>
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN" />
-                        <category android:name="android.intent.category.HOME" />
-                        <category android:name="android.intent.category.DEFAULT" />
-                    </intent-filter>
-                </set>
-                <activity
-                    android:name="com.github.gezimos.inkos.MainActivity"
-                    android:package="app.inkos" />
-            </preferred-activity>
-        </item>
-    </array>
 </resources>
