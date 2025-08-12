@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="me.phh.treble.overlay.fairphone.mp01"
+        package="me.phh.treble.overlay.minimal.mp01"
         android:versionCode="1"
         android:versionName="1.0">
         <overlay android:targetPackage="android"
                 android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
-                android:requiredSystemPropertyValue="+Minimal/MP01*"
+                android:requiredSystemPropertyValue="+*Minimal_Phone/MP01*"
                 android:priority="21"
                 android:isStatic="true" />
 </manifest>

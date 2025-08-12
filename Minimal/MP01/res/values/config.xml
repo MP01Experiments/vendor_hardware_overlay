@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://android.googlesource.com/platform/frameworks/base/+/android-15.0.0_r36/core/res/res/values/config.xml -->
+
+<resources>
+    <string-array name="config_biometric_sensors">
+        <item>0:2:15</item>
+    </string-array>
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/arm/boot-mediatek-framework.vdex</item>
+        <item>/system/lib/libjavacrypto.so</item>
+        <item>/system/lib/libhidltransport.so</item>
+        <item>/system/framework/arm/boot-core-libart.oat</item>
+        <item>/system/framework/arm/boot-conscrypt.oat</item>
+        <item>/system/framework/arm/boot-core-libart.vdex</item>
+        <item>/system/framework/arm/boot-ext.vdex</item>
+        <item>/system/framework/arm/boot.vdex</item>
+        <item>/system/framework/arm/boot-framework.vdex</item>
+    </string-array>
+    <string-array name="config_tether_bluetooth_regexs">
+        <item>bt-pan</item>
+        <item>bt-dun</item>
+    </string-array>
+    <string-array name="config_tether_usb_regexs">
+        <item>rndis\\d</item>
+    </string-array>
+    <string-array name="config_tether_wifi_regexs">
+        <item>ap\\d</item>
+    </string-array>
+    <string-array name="networkAttributes">
+        <item>wifi,1,1,1,-1,true</item>
+        <item>mobile,0,0,0,-1,true</item>
+        <item>mobile_mms,2,0,2,60000,true</item>
+        <item>mobile_supl,3,0,2,60000,true</item>
+        <item>mobile_dun,4,0,2,60000,true</item>
+        <item>mobile_hipri,5,0,3,60000,true</item>
+        <item>ethernet,9,9,9,-1,true</item>
+        <item>mobile_fota,10,0,2,60000,true</item>
+        <item>mobile_ims,11,0,-1,-1,true</item>
+        <item>mobile_cbs,12,0,2,60000,true</item>
+        <item>wifi_p2p,13,1,0,-1,true</item>
+        <item>mobile_ia,14,0,2,-1,true</item>
+        <item>mobile_emergency,15,0,2,-1,true</item>
+        <item>mobile_mcx,1001,0,3,60000,true</item>
+        <item>mobile_xcap,1002,0,3,60000,true</item>
+        <item>mobile_rcs,2001,0,3,60000,true</item>
+        <item>mobile_bip,2002,0,3,60000,true</item>
+        <item>mobile_vsim,2003,0,-1,60000,true</item>
+    </string-array>
+    <bool name="config_automatic_brightness_available">false</bool>
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_carrier_volte_available">true</bool>
+    <bool name="config_device_vt_available">false</bool> <!-- TODO: check if this is correct, idk what VT does -->
+    <bool name="config_device_wfc_ims_available">false</bool> <!-- TODO: check if this can be enabled and/if it's causing volte issues -->
+    <bool name="config_hotswapCapable">true</bool>
+    <bool name="config_setColorTransformAccelerated">true</bool>
+    <bool name="config_showNavigationBar">false</bool>
+    <bool name="config_switch_phone_on_voice_reg_state_change">true</bool>
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+    <bool name="skip_restoring_network_selection">false</bool>
+
+        <!-- Are we allowed to dream while not plugged in? -->
+    <bool name="config_dreamsEnabledOnBattery">false</bool>
+    <!-- Minimum battery level to allow dreaming when powered.
+         Use -1 to disable this safety feature. -->
+    <integer name="config_dreamsBatteryLevelMinimumWhenPowered">-1</integer>
+    <!-- Minimum battery level to allow dreaming when not powered.
+         Use -1 to disable this safety feature. -->
+    <integer name="config_dreamsBatteryLevelMinimumWhenNotPowered">20</integer>
+    <!-- If the battery level drops by this percentage and the user activity timeout
+         has expired, then assume the device is receiving insufficient current to charge
+         effectively and terminate the dream.  Use -1 to disable this safety feature.  -->
+    <integer name="config_dreamsBatteryLevelDrainCutoff">5</integer>
+    <!-- Flag to disable all transition animations -->
+    <bool name="config_disableTransitionAnimation">true</bool>
+    <!-- Whether safe headphone hearing is enforced by any regulation (e.g.
+         EN50332-3, EN50332-2) or not (country specific). -->
+    <bool name="config_safe_media_volume_enabled">false</bool>
+    <!-- Component name for the activity that will be presenting the Recents UI, which will receive
+         special permissions for API related to fetching and presenting recent tasks. The default
+         configuration uses Launcehr3QuickStep as default launcher and points to the corresponding
+         recents component. When using a different default launcher, change this appropriately or
+         use the default systemui implementation: com.android.systemui/.recents.RecentsActivity -->
+    <string name="config_recentsComponentName" translatable="false"
+            >com.android.launcher3/com.android.quickstep.RecentsActivity</string>
+    <!-- Number of milliseconds to hold a wake lock to ensure that drawing is fully
+         flushed to the display while dozing.  This value needs to be large enough
+         to account for processing and rendering time plus a frame or two of latency
+         in the display pipeline plus some slack just to be sure. -->
+    <integer name="config_drawLockTimeoutMillis">700</integer>
+    <!-- Indicates whether device has a power button fingerprint sensor. -->
+    <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
+</resources>
